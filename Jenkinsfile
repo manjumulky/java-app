@@ -16,10 +16,10 @@ pipeline{
                 git branch: 'main', url: 'https://github.com/manjumulky/java-app.git'
             )
             }
-        }
+        
     }  
-    }   
-          
+        
+    }
       
           
 
