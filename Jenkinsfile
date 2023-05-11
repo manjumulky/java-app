@@ -12,7 +12,7 @@ pipeline{
                     
             steps{
              
-                scripts{          
+                script{          
                     
                     git branch: 'main', url: 'https://github.com/manjumulky/java-app.git'
                 }    
