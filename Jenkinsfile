@@ -15,8 +15,8 @@ pipeline{
                          
                     
                      gitCheckout(
-                branch: "main",
-                url: "https://github.com/manjumulky/java-app.git"
+                         branch: "main",
+                         url: "https://github.com/manjumulky/java-app.git"
                      )
                    
             
