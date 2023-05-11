@@ -14,10 +14,10 @@ pipeline{
              
                          
                     
-                     gitCheckout(
-                         branch: "main",
-                         url: "https://github.com/manjumulky/java-app.git"
-                     )
+            gitCheckout(
+                branch: "main",
+                url: "https://github.com/manjumulky/java-app.git"
+            )
                    
             
             }
