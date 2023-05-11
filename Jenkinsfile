@@ -1,4 +1,4 @@
-
+@Library('my-shared-library') _
 
 pipeline{
 
@@ -14,7 +14,10 @@ pipeline{
              
                 script{          
                     
-                    git branch: 'main', url: 'https://github.com/manjumulky/java-app.git'
+                     gitCheckout(
+                branch: "main",
+                url: ""
+            )
                 }    
             
             }
