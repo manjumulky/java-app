@@ -18,7 +18,7 @@ pipeline{
                     when { expression {  params.action == 'create' } }
             steps{
             gitCheckout(
-                branch: "main",
+                branch: "main"
                 url: "https://github.com/manjumulky/java-app.git"
             )
             }
