@@ -8,7 +8,7 @@ pipeline{
     stages{
          
         stage('Git Checkout'){
-                   
+                    
             steps{
             gitCheckout(
                 branch: "main",
@@ -16,5 +16,15 @@ pipeline{
             )
             }
         }
+        stage('Unit Test maven'){
+                    
+            steps{
+               script{
+                   mvn Test()
+               }
+            
+            }
+        }
     }
+    
 }         
