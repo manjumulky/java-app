@@ -20,7 +20,7 @@ pipeline{
                     
             steps{
                script{
-                   mvn Test()
+                   mvnTest()
                }
             
             }
