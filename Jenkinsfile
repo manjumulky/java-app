@@ -26,15 +26,14 @@ pipeline{
             }
         }
         stage('Static code analysis: Sonarqube'){
-                    
+         
             steps{
                script{
-                   statiCodeAnalysis()
+                   
+                   def SonarQubecredentialsId = 'sonar-apikey'
+                   statiCodeAnalysis(SonarQubecredentialsId)
                }
-            
             }
-        
-
         }
         
         
