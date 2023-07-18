@@ -25,27 +25,19 @@ pipeline{
             
             }
         }
-        
-
-        stage('Integration Test maven'){
-                    
-            steps{
-               script{
-                   mvnintegrationTest()
-               }
-            
-            }
-        }
         stage('Static code analysis: Sonarqube'){
                     
             steps{
                script{
-                   def SonarQubecredentialsId = 'sonar-apikey'
-                   statiCodeAnalysis(SonarQubecredentialsId)
+                   statiCodeAnalysis()
                }
             
             }
+        
+
         }
+        
+        
     }   
     
 }         
