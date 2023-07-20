@@ -30,7 +30,7 @@ pipeline{
             steps{
                script{
                    
-                   def SonarQubecredentialsId = 'sonar-apikey'
+                   def SonarQubecredentialsId = 'sonar-j'
                    statiCodeAnalysis(SonarQubecredentialsId)
                }
             }
@@ -39,4 +39,5 @@ pipeline{
         
     }   
     
-}         
+} 
+        
