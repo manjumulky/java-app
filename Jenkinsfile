@@ -8,6 +8,7 @@ pipeline{
     stages{
          
         stage('Git Checkout'){
+                   when { expression {  params.action == 'create' } }
                     
             steps{
             gitCheckout(
@@ -17,6 +18,7 @@ pipeline{
             }
         }
         stage('Unit Test maven'){
+        when { expression {  params.action == 'create' } }
                     
             steps{
                script{
@@ -26,6 +28,7 @@ pipeline{
             }
         }
         stage('Integration Test maven'){
+        when { expression {  params.action == 'create' } }
          
             steps{
                script{
@@ -35,9 +38,9 @@ pipeline{
             }
         }
         stage('Static code analysis: Sonarqube'){
-         
+         when { expression {  params.action == 'create' } }
             steps{
-               script{
+               script{  
                    
                    def SonarQubecredentialsId = 'sonar-j'
                    statiCodeAnalysis(SonarQubecredentialsId)
