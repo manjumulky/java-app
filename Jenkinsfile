@@ -40,13 +40,14 @@ pipeline{
                }
             }
         }
-        stage('Static code analysis: Sonarqube'){
+        
+        stage('Quality Gate Status check : Sonarqube'){
          when { expression {  params.action == 'create' } }
             steps{
                script{  
                    
                    def SonarQubecredentialsId = 'sonar-j'
-                   statiCodeAnalysis(SonarQubecredentialsId)
+                   qualityGateStatus(SonarQubecredentialsId)
                }
             }
         }
