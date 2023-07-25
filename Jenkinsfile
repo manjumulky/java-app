@@ -60,7 +60,8 @@ pipeline{
                    mvnBuild()
                }
             }
-    }   
+        }
+    }  
     
 } 
         
