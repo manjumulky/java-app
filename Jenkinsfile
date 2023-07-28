@@ -11,12 +11,12 @@ pipeline{
                    
                     
             steps{
-                script{
-                   GitCheckout(
-                       branch: "main",
-                       url: "https://github.com/manjumulky/java-app.git"
-                   )
-                }
+                
+            GitCheckout(
+                branch: "main",
+                url: "https://github.com/manjumulky/java-app.git"
+            )
+                
 
 
 
