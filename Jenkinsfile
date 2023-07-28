@@ -13,7 +13,7 @@ pipeline{
                     
             steps{
                 script{
-                   Gitcheckout(
+                   GitCheckout(
                        branch: "main",
                        url: "https://github.com/manjumulky/java-app.git"
                    )
