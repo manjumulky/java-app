@@ -1,4 +1,4 @@
-
+@Library('jenkinas_shared_library') _
 
 pipeline{
 
